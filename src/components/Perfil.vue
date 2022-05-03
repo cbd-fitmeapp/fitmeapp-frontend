@@ -91,6 +91,7 @@ import tresMeses from '../../public/images/planes/plan_de_pago_3_meses.png';
 import seisMeses from '../../public/images/planes/plan_de_pago_6_meses.png';
 import doceMeses from '../../public/images/planes/plan_de_pago_12_meses.png';
 import userService from '../service/UserService';
+import AlimentoService from '../service/AlimentoService';
 
 export default {
 	data() {
@@ -110,13 +111,19 @@ export default {
     },
     userService: null,
     created(){
+        
         this.userService = new userService();
+        this.alimentoService = new AlimentoService();
+        this.pruebaMapReduce();
         this.obtenerUser();
     },
     mounted(){
         this.obtenerSuscripcion();
     },
     methods:{
+        pruebaMapReduce(){
+				this.alimentoService.pruebaMapReduce();
+		},
         obtenerSuscripcion(){
             this.userService.getSuscripcion(this.$store.state.userId)
             .then(data => {

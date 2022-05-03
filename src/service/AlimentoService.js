@@ -172,4 +172,13 @@ export default class AlimentoService {
         });
     }
 
+    pruebaMapReduce(){
+        return axios.get(`/comidas/mapreduce`)
+        .then((response) => 
+			response.data)
+        .catch((e)=>{
+            console.log('error' + e);
+        });
+    }
+
 }

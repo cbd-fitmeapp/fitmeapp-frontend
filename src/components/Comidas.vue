@@ -569,6 +569,7 @@
 		userService: null,
 		favoritosList: [],
 		created(){
+
 			this.alimentoService = new AlimentoService();
 			this.userService = new UserService();
 			this.inicio();
@@ -580,6 +581,7 @@
 				filters: ''
 			};
 			this.fetchItems();
+			
 			
 		},
 		methods: {

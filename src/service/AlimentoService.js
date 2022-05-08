@@ -181,4 +181,22 @@ export default class AlimentoService {
         });
     }
 
+    aggregateComparativa(tipo){
+        return axios.get(`/comidas/aggregate/${tipo}`)
+        .then((response) => 
+			response.data)
+        .catch((e)=>{
+            console.log('error' + e);
+        });
+    }
+
+    aggregateComidas(tipo){
+        return axios.get(`/comidas/aggregateComida/${tipo}`)
+        .then((response) => 
+			response.data)
+        .catch((e)=>{
+            console.log('error' + e);
+        });
+    }
+
 }

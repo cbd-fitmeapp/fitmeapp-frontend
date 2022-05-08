@@ -130,6 +130,11 @@ const routes = [
         name: 'condiciones',
         component: () => import('./components/GDPR_registro.vue')
     },
+    {
+        path: '/estadisticas',
+        name: 'estadisticas',
+        component: () => import('./components/Estadisticas.vue')
+    },
 ];
 
 const router = createRouter({

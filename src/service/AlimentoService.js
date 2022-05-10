@@ -172,8 +172,8 @@ export default class AlimentoService {
         });
     }
 
-    pruebaMapReduce(){
-        return axios.get(`/comidas/mapreduce`)
+    mapReduce(tipo){
+        return axios.get(`/comidas/mapreduce/${tipo}`)
         .then((response) => 
 			response.data)
         .catch((e)=>{

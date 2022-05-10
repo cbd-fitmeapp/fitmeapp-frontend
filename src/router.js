@@ -135,6 +135,11 @@ const routes = [
         name: 'estadisticas',
         component: () => import('./components/Estadisticas.vue')
     },
+    {
+        path: '/estadisticas_alternativas',
+        name: 'estadisticas_alternativas',
+        component: () => import('./components/EstadisticasAlternativas.vue')
+    },
 ];
 
 const router = createRouter({

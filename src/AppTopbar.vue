@@ -9,7 +9,7 @@
 
         <ul class="layout-topbar-menu hidden lg:flex origin-top align-items-center justify-content-center">
             <li class="mt-3 ml-8">
-                <router-link to="/estadisticas">
+                <router-link to="/estadisticas_alternativas">
                     <h1 class="stats titulo">Estadíticas</h1>
                 </router-link>
             </li>

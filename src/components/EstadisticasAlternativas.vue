@@ -123,7 +123,6 @@ export default {
                         data = data.comparativa[0]
                         this.usuario = this.selector_usuario.filter(x=>x.code==data._id)[0]
                         dataMapReduce = dataMapReduce.results.filter(x=>x._id == this.usuario.code)[0]
-                        console.log(dataMapReduce);
                     }
                     
                     this.barData = {

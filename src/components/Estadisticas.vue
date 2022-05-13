@@ -88,9 +88,7 @@ export default {
             }
 
 			this.alimentoService.aggregateComidas(tipoEnvio).then(data =>{
-                console.log(data);
-                console.log("....",this.usuario.name)
-                console.log("++++")
+
                 if (this.usuario.name != undefined){
                     data = data.comparativa.filter(x=>x._id[0]._id == this.usuario.code)[0].alimentos
                 }else{
@@ -124,6 +122,7 @@ export default {
                 for (var i=0; i<data.comparativa.length; i++){
                     this.selector_usuario.push({name: data.comparativa[i].usuario[0].nombre+" "+data.comparativa[i].usuario[0].apellidos, code: data.comparativa[i]._id})
                 }
+                console.log(data)
 
                 if (data.tipo == "semana"){
                     this.tipo = "semanal";
@@ -135,6 +134,7 @@ export default {
                     data = data.comparativa.filter(x=>x._id == this.usuario.code)[0]
                 }else{
                     data = data.comparativa[0]
+                    this.usuario = this.selector_usuario.filter(x=>x.code==data._id)[0]
                 }
                 
 

@@ -7,6 +7,13 @@
             </router-link>
         </div>
 
+        <ul class="layout-topbar-menu hidden lg:flex origin-top align-items-center justify-content-center">
+            <li class="mt-3 ml-8">
+                <router-link to="/estadisticas">
+                    <h1 class="stats titulo">Estadíticas</h1>
+                </router-link>
+            </li>
+        </ul>
         <ul class="layout-topbar-menu hidden lg:flex origin-top align-items-center justify-content-left">
             <li class="mt-3 ml-8">
                 <router-link to="/">
@@ -59,6 +66,9 @@
                 </router-link>
                 <router-link to="/perfil" @click="visibleLeft=false">
                     <h1 class="color titulo">Perfil</h1>
+                </router-link>
+                <router-link to="/" @click="visibleLeft=false">
+                    <h1 class="stats titulo">Estadísticas</h1>
                 </router-link>
             </div>
             <div align="center">
@@ -138,6 +148,16 @@ export default {
     }
     .color:hover {
         color: #256029;
+    }
+
+    .stats{
+        padding: 2%;
+        margin-top: 0.5em;
+        color:rgb(214, 216, 74);
+        line-height: 2;
+    }
+    .stats:hover {
+        color: #7c7e03;
     }
     span.color{
         transition: 0.5s;
